@@ -1,6 +1,8 @@
 package com.aninfo.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Account {
@@ -10,6 +12,13 @@ public class Account {
     private Long cbu;
 
     private Double balance;
+
+    /*private List<Transaction> myObjects;
+
+    @ElementCollection(targetClass = Transaction.class, fetch = FetchType.EAGER)
+    @CollectionTable(name = "books", joinColumns = @JoinColumn(name = "library_id"))
+    @Column(name = "book", nullable = false)
+    private List<Transaction> transactions = new ArrayList<Transaction>();*/
 
     public Account(){
     }
@@ -33,5 +42,13 @@ public class Account {
     public void setBalance(Double balance) {
         this.balance = balance;
     }
+
+    /*public void addTransaction(Transaction transaction) {}
+
+    public Double[] getTransactions() { return transactions; }
+
+    public Double[] getTransaction(Long id) { }
+
+    public deleteTransaction(Long id) {}*/
 
 }
