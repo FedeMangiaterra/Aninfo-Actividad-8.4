@@ -66,7 +66,7 @@ public class AccountService {
         }
 
         Double final_sum = sum;
-        if (sum > 2000) {
+        if (sum >= 2000) {
             final_sum += min(sum * 0.1, 500);
         }
 
