@@ -19,11 +19,7 @@ public class Transaction {
 
     public Transaction(Long cbu, Double sum) {
         this.cbu = cbu;
-        Double final_sum = sum;
-        if (sum > 2000) {
-            final_sum += min(sum * 0.1, 500);
-        }
-        this.sum = final_sum;
+        this.sum = sum;
     }
 
     public Long getId() {

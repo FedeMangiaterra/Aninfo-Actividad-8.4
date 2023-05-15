@@ -90,7 +90,6 @@ public class Memo1BankApp {
 
 	@GetMapping("/transactions/cbu/{cbu}")
 	public Collection<Transaction> getTransactionsByCbu(@PathVariable Long cbu) {
-		Optional<Account> accountOptional = accountService.findById(cbu);
 		return transactionService.getTransactionsByCbu(cbu);
 	}
 
